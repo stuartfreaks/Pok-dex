@@ -11,15 +11,10 @@ let pokemonList = [ {name: "Bulbasaur", height: 0.7, type: ["grass", "poison"]},
 
 
 
-// Create a for loop that loops over pokemonList 
+// Use a forEach() function instead of the for loop you have to iterate over the Pokémon in your pokemonList array in order to print the details of each one
 
-for (let i=0; i<pokemonList.length; i++) {
-    
-// outputs name and height to the DOM plus writes message for pokemons with a height over 0.6 and adds message (but only to Venusaur)
+pokemonList.forEach(function(name) {
+    console.log(name);
+});
 
-    if (pokemonList[i].height>1.7) {
-        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow! that\'s big!')
-    } else {
-        document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>')
-    }
-}
+
