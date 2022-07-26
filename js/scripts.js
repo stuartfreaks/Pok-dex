@@ -14,7 +14,5 @@ let pokemonList = [ {name: "Bulbasaur", height: 0.7, type: ["grass", "poison"]},
 // Use a forEach() function instead of the for loop you have to iterate over the Pokémon in your pokemonList array in order to print the details of each one
 
 pokemonList.forEach(function(name) {
-    console.log(name);
+   console.log(name);
 });
-
-
