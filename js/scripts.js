@@ -13,26 +13,39 @@ let pokemonRepository = (function () {
    
    ]; 
    
-   return {
-       add: function(pokemon){
-           pokemonList.push(pokemon);
-       },
-       getAll: function() {
-         return pokemonList;
-    }   
-   
-    };
-   })();
+   function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
+})();
    
    //getAll: return all items (pokemonRepository.getAll(); should return the pokemonList array)
    
-   console.log(pokemonRepository.getAll()); //[]
+  
+
 
    //add: add a single item to the pokemonList array (calling pokemonRepository.add(item);
+
+
    
-   pokemonRepository.add({name: 'Pikachu'});
+   pokemonRepository.add({name: 'Pikachu', height: 1.4, type: ["electric"]});
 
    console.log(pokemonRepository.getAll());
+
+
+   //ForEach loop through the array 
+
+   pokemonRepository.getAll().forEach(function(pokemon){
+    pokemonRepository.add(pokemon); 
+  });
 
 
    
